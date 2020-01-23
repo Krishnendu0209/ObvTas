@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.GridView;
 
+import com.example.obvtas.adapter.ImageAdapter;
 import com.example.obvtas.model.ImageDetails;
 
 import org.json.JSONArray;
