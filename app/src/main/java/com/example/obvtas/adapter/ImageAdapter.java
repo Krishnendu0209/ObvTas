@@ -57,10 +57,10 @@ public class ImageAdapter extends BaseAdapter
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         imageGrid = inflater.inflate(R.layout.image_grid, null);
 
-        imageTitle = imageGrid.findViewById(R.id.grid_text);
+        //imageTitle = imageGrid.findViewById(R.id.grid_text); // Commented out the set title as the text view has been removed
         imageView = imageGrid.findViewById(R.id.grid_image);
 
-        imageTitle.setText(imageTitles.get(position));// Image TEXT is set
+        //imageTitle.setText(imageTitles.get(position));// Image TEXT is set -- Commented out the set title as the text view has been removed
         loadImages(imageURLs.get(position)); //Image will be loaded from the URL
 
         return imageGrid;
