@@ -2,8 +2,12 @@ package com.example.obvtas;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.Toast;
 
+import com.example.obvtas.adapter.ImageAdapter;
 import com.example.obvtas.model.ImageDetails;
 
 import org.json.JSONArray;
@@ -31,11 +35,18 @@ public class MainActivity extends AppCompatActivity
         {
             parseStringJSONData(); //The parsing will begin
         }
-        ImageAdapter adapter = new ImageAdapter(getApplicationContext(),imageTitles,imageLinks); //Adapter has been instantiated with necessary parameters
-        gridView =findViewById(R.id.grid_view); //Grid view initialised
+        ImageAdapter adapter = new ImageAdapter(getApplicationContext(), imageTitles, imageLinks); //Adapter has been instantiated with necessary parameters
+        gridView = findViewById(R.id.grid_view); //Grid view initialised
         gridView.setAdapter(adapter); // The image adapter is called to get set with the data
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() //When any of the item is the following code is executed
+        {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+            {
+                //Write You Code for action to be taken
+            }
+        });
     }
-
     /* The function is responsible for reading the data from the JSON file
         and storing it as string for further parsing and processing of the data
     */
