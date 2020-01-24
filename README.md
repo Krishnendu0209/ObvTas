@@ -10,3 +10,6 @@ This is what inspired us to share such beautiful images and knowledge at the tip
 ## Implemetation
 
 *The image is loaded from the open API shared by the NASA as well as the background knowledge of the image is also displayed to the users.*  
+![solarized palette](https://github.com/Krishnendu0209/ObvTas/blob/master/app/src/main/res/screen_shots/Screenshot_20200124-204701.png)
+
+![solarized vim](https://github.com/Krishnendu0209/ObvTas/blob/master/app/src/main/res/screen_shots/Screenshot_20200124-204717.png)
