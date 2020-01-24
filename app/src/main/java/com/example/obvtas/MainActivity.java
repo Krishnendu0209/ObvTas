@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity
     */
     private void displayImageDetails(ImageDetails imageDetails)
     {
-        gridView.setVisibility(View.INVISIBLE);//When an item is selected the same frame layout in which the grid view is there, in that itself the fragment_image_details.xml will populate itself
+        gridView.setVisibility(View.GONE);//When an item is selected the same frame layout in which the grid view is there, in that itself the fragment_image_details.xml will populate itself
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_placeholder,
                 ImageDetailsFragment.newInstance(imageDetails))//The ImageDetails Fragment is called
                         .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
@@ -110,5 +110,10 @@ public class MainActivity extends AppCompatActivity
         {
             e.printStackTrace();
         }
+    }
+    public void onBackPressed() //Overriding it so that when back button is clicked again the grid view is made visible
+    {
+        super.onBackPressed();
+        gridView.setVisibility(View.VISIBLE);//The Grid View should get visible when back is pressed
     }
 }
