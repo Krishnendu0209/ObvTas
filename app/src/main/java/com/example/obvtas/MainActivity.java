@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity
                 imageDetails.setServiceVersion(imageObject.getString("service_version")); //Get the service version
                 imageDetails.setTitle(imageObject.getString("title"));//Get the title
                 imageDetails.setUrl(imageObject.getString("url")); //Get the url
-                imageLinks.add(imageObject.getString("url"));// The array list will finally contain all the links of the images
+                imageLinks.add(imageObject.getString("hdurl"));// The array list will finally contain all the links of the images
                 imageDetailsList.add(imageDetails); //All the images' details are added as objects are added one by one to the list
                 imageTitles.add(imageObject.getString("title"));
             }

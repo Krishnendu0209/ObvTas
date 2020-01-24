@@ -8,11 +8,8 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/imageTitle"
         style="@style/textStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
         android:text="Title"
         android:textSize="25dp"
         android:textStyle="italic" />
@@ -21,31 +18,22 @@
         android:layout_width="200dp"
         android:layout_height="2dp"
         android:layout_gravity="center"
-        android:layout_margin="10dp"
+        android:layout_margin="5dp"
         android:background="@android:color/black" />
 
     <ImageView
-        android:id="@+id/image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/highDefinitionImage"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:src="@drawable/ic_launcher_background" />
-
-    <TextView
-        android:id="@+id/imageCreditCopyright"
-        style="@style/textStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Image Credit and Copyright"
-        android:textStyle="italic" />
 
     <TextView
         android:id="@+id/imageDetailsHeading"
         style="@style/textStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
+        android:layout_marginTop="10dp"
         android:text="Image Details"
         android:textSize="25dp"
         android:textStyle="italic" />
@@ -54,12 +42,14 @@
         android:layout_width="200dp"
         android:layout_height="2dp"
         android:layout_gravity="center"
-        android:layout_margin="10dp"
+        android:layout_margin="5dp"
         android:background="@android:color/black" />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -72,9 +62,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Image Details"
-                android:textSize="25dp"
-                android:textStyle="italic" />
+                android:textSize="20dp" />
         </LinearLayout>
     </ScrollView>
-
 </LinearLayout>
