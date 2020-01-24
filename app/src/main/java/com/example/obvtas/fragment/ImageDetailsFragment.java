@@ -20,8 +20,7 @@ public class ImageDetailsFragment extends Fragment
 
     public static ImageDetailsFragment newInstance(ImageDetails imageDetails)
     {
-        ImageDetailsFragment fragment = new ImageDetailsFragment();
-        return fragment;
+        return new ImageDetailsFragment();
     }
 
     @Override
