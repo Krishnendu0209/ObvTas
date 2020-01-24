@@ -8,6 +8,7 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 import com.example.obvtas.adapter.ImageAdapter;
+import com.example.obvtas.fragment.ImageDetailsFragment;
 import com.example.obvtas.model.ImageDetails;
 
 import org.json.JSONArray;
@@ -43,10 +44,22 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id)
             {
-                //Write You Code for action to be taken
+                //When an item is clicked the Image Details are displayed
+                displayImageDetails(imageDetailsList.get(position));
             }
         });
     }
+    /* The function is responsible for passing an Image object to the fragment to display the respective image details
+    */
+    private void displayImageDetails(ImageDetails imageDetails)
+    {
+        gridView.setVisibility(View.INVISIBLE);//When an item is selected the same frame layout in which the grid view is there, in that itself the fragment_image_details.xml will populate itself
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_placeholder,
+                ImageDetailsFragment.newInstance(imageDetails))//The ImageDetails Fragment is called
+                        .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
+                        .addToBackStack("Image Details").commit();
+    }
+
     /* The function is responsible for reading the data from the JSON file
         and storing it as string for further parsing and processing of the data
     */
